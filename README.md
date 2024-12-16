@@ -62,3 +62,4 @@ http://127.0.0.1:5000/
 -Start a conversation with 2-CUPS by sharing your thoughts or feelings.
 
 -Receive empathetic and AI-generated responses tailored to your input.
+
