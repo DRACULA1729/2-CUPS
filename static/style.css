@@ -6,9 +6,14 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    background-image: url('media/Mahabharat.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    
 }
 
 .chat-container {
+    position: relative;
     width: 400px;
     height: 600px;
     border: 1px solid #ccc;
@@ -16,16 +21,32 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
+    padding: 10px;
+    
 }
 
+.welcome-message {
+    position: absolute;
+    font-size: 13px;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    background-color: #f0f8ff; /* Light background color for the welcome message */
+    padding: 5px 10px; /* Padding around the welcome message */
+    border-radius: 5px; /* Rounded corners for the welcome message */
+    width: auto; /* Make it full width of the chat container */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
 #chat-messages {
     flex-grow: 1;
     overflow-y: auto;
     padding: 10px;
+    margin-top: 60px; /* Add margin to avoid overlap with welcome message */
+    background-color: #fff; /* Background color for chat messages */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 5px; 
 }
-.message {
-    margin-bottom: 10px; /* Add space between messages */
-}
+
 #chat-form {
     display: flex;
     padding: 10px;
@@ -34,6 +55,7 @@ body {
 }
 
 #user-input {
+    flex: 1;
     flex-grow: 1;
     padding: 5px;
     border: 1px solid #ccc;
@@ -41,12 +63,11 @@ body {
 }
 
 button {
-    margin-left: 5px;
-    padding: 5px 10px;
+    padding: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
